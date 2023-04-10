@@ -1,0 +1,277 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#MiniMessage{
+    margin-left: 30px;
+    display: none;
+}
+#imageControl{
+    display: none;
+}
+button{
+    cursor: pointer;
+}
+
+.notice-containers{
+    text-align: center;
+    padding: 15px;
+}
+
+.container-all{
+    height: 100vh;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#Notice-Tittle{
+    display: inline;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-heart{
+    color: #ff0000;
+    font-size: 80px;
+    animation: beat 0s infinite;
+}
+
+.first-person,
+.second-person{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: #e2002d;
+}
+
+.head-person{
+    height: 90px;
+    width: 90px;
+    background-color: bisque;
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.head-person span{
+    color: black;
+    font-size: 80px;
+}
+
+.container-persons{
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top: 50vh;
+}
+
+.first-person{
+    top: 50%;
+    background-color: #4080ee;
+    border: #4080ee solid 3px;
+    transform: translate(-50%, -50%);
+    animation: firstPerson 8s forwards;
+}
+
+.first-person i{
+    top: 50%;
+    left: 125%;
+    font-size: 60px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+.second-person{
+    top: 50%;
+    left: 60%;
+    background-color: #b82bec;
+    border: #b82bec solid 3px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.container-message{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+}
+
+.first-message,
+.second-message,
+.third-message{
+    background-color: #e928dc;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.third-message{
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+.third-message > *{
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.third-message > h3{
+    top: 18%;
+}
+
+.firstSelect,
+.secondSelect{
+    position: absolute;
+    width: 150px;
+    border: none;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.firstSelect{
+    left: 40%;
+    top: 50%;
+}
+
+.secondSelect{
+    left: 60%;
+    top: 50%;
+}
+
+.buttons-container{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    top: 95%;
+}
+
+.button{
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    left: 2%;
+    position: relative;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+
+.closeXmark{
+    position: relative;
+    left: 95%;
+    top: 5%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+
+.nextMessage{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 30px;
+    border: none;
+    color: purple;
+}
+
+
+.toPerson{
+    position: relative;
+    left: 5%;
+}
+
+p{
+    font-size: 22px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+@keyframes firstPerson {
+    
+    from {left: 0px;}
+    to {left: 40%;}
+
+}
+
+/* Smooth animations */
+
+.in-animation{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.first-message_animation {
+    transform: translate(-50%, -180%);
+    transition: transform 500ms ease-in-out;
+  }
+
+
+.second-message_animation{
+    transform: translate(-150%, -50%);
+    transition: transform 500ms ease-in-out;
+}
+
+/* Codepen code */
+
+/* CTNieves */
+.container-heart{
+    display: none;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    animation: 1.5s ease 0s infinite pulse;
+    cursor: pointer;
+  }
+  
+  .box {
+    height: 90%;
+    max-height: 400px;
+  }
+  
+  #heart {
+    height: 100%;
+    margin-left: auto;
+    animation: 1.5s ease 0s infinite beat;
+  }
+  
+  @keyframes beat {
+    0%, 50%, 100% { transform: scale(1, 1); }
+    30%, 80% { transform: scale(0.92, 0.95); }
+  }
+  
